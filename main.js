@@ -1,11 +1,13 @@
 const fs = require('fs');
+const path = require('path');
 
 function printFileContents(filePath) {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
-      console.error(`Error reading file: ${err.message}`);
+      console.error(`Column '${columnName}' not found in the CSV.`);
       process.exit(1);
     }
+
     console.log(data);
   });
 }
